@@ -90,15 +90,15 @@ const { exit } = require('process');
       await driver.sleep(2500);
       await driver
         .navigate()
-        .to("https://id.savefrom.net/76");
-      console.log(`[Processing] Submit -> Video Title : ${videos[i].title}`);
-      const inputEl = await driver.findElement(By.id("sf_url"));
-      const submitEl = await driver.findElement(By.id("sf_submit"));
-      // const formatEl = await driver.findElement(
-      //   By.xpath(`//option[@value='${process.env.VIDEO_RES}']`)
-      // );
+        .to("https://loader.to/id72/youtube-mp4-downloader.html");
+      console.log(`[Processing] Submit ${videos[i].title}`);
+      const inputEl = await driver.findElement(By.id("link"));
+      const submitEl = await driver.findElement(By.id("load"));
+      const formatEl = await driver.findElement(
+        By.xpath(`//option[@value='${process.env.VIDEO_RES}']`)
+      );
       await inputEl.sendKeys(videos[i].href);
-      // await formatEl.click();
+      await formatEl.click();
       await submitEl.click();
       console.log(
         `[Processing] Download -> Video Title : ${videos[i].title} on https://loader.to/ server`
@@ -109,12 +109,12 @@ const { exit } = require('process');
       await driver.sleep(2000);
       await driver.wait(
         until.elementIsNotVisible(
-          driver.findElement(By.xpath('//div[@id="sf_indicator_box"]'))
+          driver.findElement(By.xpath('//div[@class="loader"]'))
         )
       );
   
       const downloadEl = await driver.findElement(
-        By.xpath('//a[contains(@class, "download-icon")]')
+        By.xpath('//a/button[@class="strong"]')
       );
   
       /**
