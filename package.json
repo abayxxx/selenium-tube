@@ -1,0 +1,17 @@
+{
+  "name": "selenium-tube",
+  "version": "1.0.0",
+  "description": "youtube playlist downloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "path": "^0.12.7",
+    "selenium-webdriver": "^4.1.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
