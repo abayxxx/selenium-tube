@@ -1,8 +1,8 @@
-# Seletube 📺
+# Seletube
 
 _YouTube Playlist Downloader_. It is powered by https://loader.to/ with Selenium 4 and Google Chrome.
 
-### Warning 💀
+### Warning
 
 This app is only for learning purposes. I create this app because I want to learn Selenium.
 
